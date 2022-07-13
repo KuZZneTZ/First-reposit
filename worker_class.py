@@ -18,7 +18,6 @@ class Worker:
         self.list.remove(self)
         print(f"{self.name} was fired")
 
-
 class Builder(Worker):
     ability = 'build something'
 
@@ -42,3 +41,6 @@ print("Meet", w1)
 w2.fire()
 
 print("Currently working: " + ", ".join([f"{w.__class__.__name__.lower()} {w.name}" for w in wrks_list]))
+
+print("Total salary expences: ", sum([w.salary for w in wrks_list]))
+print("Programm finished...")
